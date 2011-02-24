@@ -1,28 +1,31 @@
 <% content_for :engine_menu do -%>
 
-	<nav id="actions">
+	<ul id="actions">
 		
-		<%= link_to t('.posts.new'), new_admin_blog_post_url, :class => 'page_add_icon' %>
-		<%= link_to t('.posts.uncategorized'), uncategorized_admin_blog_posts_url, :class => 'page_icon' %>
+		<li><%= link_to t('.posts.new'), new_admin_blog_post_url %></li>
+		<li><%= link_to t('.posts.uncategorized'), uncategorized_admin_blog_posts_url %></li>
 		
-	  <% if BlogPost.comments_allowed? %>
-			<% if BlogComment.unmoderated.any? %>
-				<% title = t('.comments.title_with_count', :new_count => BlogComment.unmoderated.size) %>
-			<% else %>
-				<% title = t('.comments.title') %>
-			<% end %>
-			<%= link_to title, '#', :class => 'comments_icon' %>
-	    <%= link_to t('.comments.new'), admin_blog_comments_path, :class => 'comment_icon' %>
-			<%= link_to t('.comments.approved'), approved_admin_blog_comments_path, :class => 'comment_tick_icon' %>
-			<%= link_to t('.comments.rejected'), rejected_admin_blog_comments_path, :class => 'comment_cross_icon' %>
+		<% if BlogPost.comments_allowed? %>
+			<li>
+				<% if BlogComment.unmoderated.any? %>
+					<% title = t('.comments.title_with_count', :new_count => BlogComment.unmoderated.size) %>
+				<% else %>
+					<% title = t('.comments.title') %>
+				<% end %>
+			</li>
+			
+			<li><%= link_to title, '#' %></li>
+	    <li><%= link_to t('.comments.new'), admin_blog_comments_path %></li>
+			<li><%= link_to t('.comments.approved'), approved_admin_blog_comments_path %></li>
+			<li><%= link_to t('.comments.rejected'), rejected_admin_blog_comments_path %></li>
 	  <% end %>
 	
-		<%= link_to t('.categories.title'), '#', :class => 'folder_icon' %>
-		<%= link_to t('.categories.manage'), admin_blog_categories_url, :class => 'folder_edit_icon' %>
-		<%= link_to t('.categories.new'), new_admin_blog_category_url(:dialog => true, :height => 325), :class => 'folder_add_icon' %>
-	  <%= link_to t('.settings.title'), admin_blog_settings_path, :class => 'settings_icon' %>
+		<li><%= link_to t('.categories.title'), '#' %></li>
+		<li><%= link_to t('.categories.manage'), admin_blog_categories_url %></li>
+		<li><%= link_to t('.categories.new'), new_admin_blog_category_url(:dialog => true, :height => 325) %></li>
+	  <li><%= link_to t('.settings.title'), admin_blog_settings_path %></li>
 	
-	</nav><!-- #actions -->
+	</ul><!-- #actions -->
 	
 <% end %>
 
