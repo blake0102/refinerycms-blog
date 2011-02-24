@@ -32,3 +32,54 @@
 	background-color: #333;
 	color: #A1D6D2;
 }
+
+/* ## End of the sidebar navigation ---------------------- */
+
+
+
+#sortable_list li.blog_entry {
+	padding: 10px;
+	margin: 0;
+}
+#sortable_list li.blog_entry.on {
+	background-color: #fff;
+	border-top: 1px solid #d6ede5;
+	border-bottom: 1px solid #fff;
+}
+#sortable_list li.blog_entry.on:hover, #sortable_list li.blog_entry.on-hover:hover {
+	background-color: #d6ede5;
+	border-top: 1px solid #bce3d5;
+}
+#sortable_list li.blog_entry.on-hover {
+	background-color: #f0f6f6;
+	border-top: 1px solid #d6ede5;
+	border-bottom: 1px solid #fff;
+}
+
+#sortable_list li .title {
+	font-size: 15px;
+	line-height: 18px;
+	display: block;
+	margin-right: 100px;
+	color: #509691;
+}
+#sortable_list li.blog_entry:hover .title  {
+	color: #30605E;
+	text-shadow: 0 1px 1px #fff;
+}
+#sortable_list li .title .preview {
+	display: block;
+	font-size: 11px;
+	text-transform: uppercase;
+	margin: 2px 0;
+	padding: 0;
+	line-height: 13px;
+	color: #888;
+}
+
+
+
+
+
+
+
