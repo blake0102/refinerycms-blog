@@ -56,7 +56,7 @@
 	border-bottom: 1px solid #fff;
 }
 
-#sortable_list li .title {
+#sortable_list li.blog_entry .title {
 	font-size: 15px;
 	line-height: 18px;
 	display: block;
@@ -67,7 +67,7 @@
 	color: #30605E;
 	text-shadow: 0 1px 1px #fff;
 }
-#sortable_list li .title .preview {
+#sortable_list li.blog_entry .title .preview {
 	display: block;
 	font-size: 11px;
 	text-transform: uppercase;
@@ -75,6 +75,35 @@
 	padding: 0;
 	line-height: 13px;
 	color: #888;
+}
+#sortable_list li.blog_entry:hover .title .preview {
+	color: #555;
+	text-shadow: none;
+}
+
+/* ## End of the sortable list for the blog -------------------- */
+
+
+
+#individual_comment {
+}
+#individual_comment header {
+	margin: 15px 0;
+	padding 0;
+	border: 0;
+}
+#individual_comment header h1 {
+	text-align: left;
+	color: #333;
+	border: 0;
+}
+#individual_comment header .back_to_all {
+	float: right;
+	text-align: right;
+	width: 200px;
+}
+#individual_comment header .back_to_all:after {
+	content: " ››";
 }
 
 

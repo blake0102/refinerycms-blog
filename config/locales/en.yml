@@ -26,8 +26,8 @@ en:
           from: Posted by
           date: Posted at
           message: Comment
-          details: Details
-          age: Age
+          details: Comment Details
+          age: Posted
           actions: Actions
           back: Back to all comments
           reject: Reject this comment
