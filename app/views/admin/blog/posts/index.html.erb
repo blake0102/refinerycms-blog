@@ -4,6 +4,7 @@
 							:locals => {
 							:url => admin_blog_posts_url
 							} %>
+	<h2>Blog Posts</h2>
   <% if searching? %>
     <h2><%= t('shared.admin.search.results_for', :query => params[:search]) %></h2>
     <% if @blog_posts.any? %>

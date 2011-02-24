@@ -1,5 +1,9 @@
 <%= render :partial => '/admin/blog/submenu' %>
 <div id='records'>
+	<%= render :partial => "/shared/admin/search",
+							:locals => {
+							:url => admin_blog_posts_url
+							} %>
   <% if searching? %>
     <h2><%= t('shared.admin.search.results_for', :query => params[:search]) %></h2>
     <% if @blog_posts.any? %>
