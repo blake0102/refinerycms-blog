@@ -22,7 +22,11 @@
 		<li><%= link_to t('.categories.title'), '#' %></li>
 		<li><%= link_to t('.categories.manage'), admin_blog_categories_url %></li>
 		<li><%= link_to t('.categories.new'), new_admin_blog_category_url(:dialog => true, :height => 325) %></li>
-	  <li><%= link_to t('.settings.title'), admin_blog_settings_path %></li>
+
+		<li><%= link_to t('.settings.comments'), comments_admin_blog_settings_url, :class => "#{BlogPost.comments_allowed? ? 'success' : 'failure'}_icon" %></li>
+    <li><%= link_to t('.settings.moderation'), moderation_admin_blog_settings_url, :class => "#{BlogComment::Moderation.enabled? ? 'success' : 'failure'}_icon" %></li>
+    <li><%= link_to t('.settings.update_notified'), notification_recipients_admin_blog_settings_url(:dialog => true, :height => 400), :class => 'user_comment_icon' %>
+    </li>
 	
 	</ul><!-- #actions -->
 	
