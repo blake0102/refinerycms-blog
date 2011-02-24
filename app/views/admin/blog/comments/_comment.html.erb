@@ -1,19 +1,17 @@
-<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= "comment-#{comment.to_param}" -%>">
-  <span class='title'>
-    <%= comment.name %>
-    <span class="preview"> - <%= truncate(comment.message, :length => 75) %></span>
-  </span>
+<li class='clearfix record comment_list <%= cycle("on", "on-hover") %>' id="<%= "comment-#{comment.to_param}" -%>">
+  <p class="author"><%= comment.name %> wrote...</p>
+	<p class="truncated_comment"> <%= truncate(comment.message, :length => 200) %></p>
   <span class='actions'>
-    <%= link_to refinery_icon_tag("application_go.png"),
+    <%= link_to refinery_icon_tag("icon-view.png"),
                 blog_post_url(comment.post, :anchor => "comment-#{comment.to_param}"),
                 :title => t('.view_live_html'),
                 :target => "_blank" unless comment.unmoderated? %>
     <%= link_to refinery_icon_tag('zoom.png'), admin_blog_comment_path(comment),
                 :title => t('.read') %>
-    <%= link_to refinery_icon_tag("cross.png"),
+    <%= link_to refinery_icon_tag("reject-comment.png"),
                 rejected_admin_blog_comment_path(comment, :return_to => request.path.split('/').last.gsub(/^comments$/, 'index')),
                 :title => t('.reject') unless comment.rejected? %>
-    <%= link_to refinery_icon_tag("tick.png"),
+    <%= link_to refinery_icon_tag("approve-comment.png"),
                 approved_admin_blog_comment_path(comment, :return_to => request.path.split('/').last.gsub(/^comments$/, 'index')),
                 :title => t('.approve') unless comment.approved? %>
   </span>

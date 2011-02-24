@@ -37,20 +37,26 @@
 
 
 
-#sortable_list li.blog_entry {
+#sortable_list li.blog_entry, 
+	#sortable_list li.comment_list {
 	padding: 10px;
 	margin: 0;
 }
-#sortable_list li.blog_entry.on {
+#sortable_list li.blog_entry.on,
+	#sortable_list li.comment_list.on {
 	background-color: #fff;
 	border-top: 1px solid #d6ede5;
 	border-bottom: 1px solid #fff;
 }
-#sortable_list li.blog_entry.on:hover, #sortable_list li.blog_entry.on-hover:hover {
+#sortable_list li.blog_entry.on:hover, 
+	#sortable_list li.blog_entry.on-hover:hover,
+	#sortable_list li.comment_list.on:hover, 
+	#sortable_list li.comment_list.on-hover:hover {
 	background-color: #d6ede5;
 	border-top: 1px solid #bce3d5;
 }
-#sortable_list li.blog_entry.on-hover {
+#sortable_list li.blog_entry.on-hover,
+#sortable_list li.comment_list.on-hover {
 	background-color: #f0f6f6;
 	border-top: 1px solid #d6ede5;
 	border-bottom: 1px solid #fff;
@@ -79,6 +85,28 @@
 #sortable_list li.blog_entry:hover .title .preview {
 	color: #555;
 	text-shadow: none;
+}
+
+#sortable_list li.comment_list p {
+	display: block;
+	color: #333;
+}
+#sortable_list li.comment_list p.author {
+	font-weight: 300;
+	color: #666;
+	margin: 0 100px 0 0;
+	padding: 0;
+}
+#sortable_list li.comment_list p.truncated_comment {
+	color: #333;
+	font-size: 12px;
+	line-height: 18px;
+	margin: 2px 100px 0 0;
+	padding: 0;
+}
+
+#sortable_list li.comment_list .actions {
+	margin: 5px 0;
 }
 
 /* ## End of the sortable list for the blog -------------------- */
@@ -191,6 +219,7 @@
 	text-shadow: 0 1px 0 #000;
 }
 
+/* ## END of comment show view -------------------- */
 
 
 
