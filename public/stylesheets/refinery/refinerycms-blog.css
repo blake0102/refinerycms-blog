@@ -106,6 +106,15 @@
 	content: " ››";
 }
 
+#individual_comment #full_comment {
+	display: block;
+	background-color: #f0f6f6;
+	padding: 15px 15px 0 15px;
+}
+#individual_comment #full_comment p {
+	margin: 0 0 15px;
+}
+
 
 
 
