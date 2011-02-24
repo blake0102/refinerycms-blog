@@ -56,15 +56,15 @@ en:
       submenu:
         categories:
           title: Categories
-          manage: Manage
+          manage: Manage categories
           new: Create new category
         comments:
           title: Comments
           title_with_count: 'Comments (%{new_count} new)'
-          new: New
-          unmoderated: New
-          approved: Approved
-          rejected: Rejected
+          new: New comments
+          unmoderated: New comments
+          approved: Approved comments
+          rejected: Rejected comments
         posts:
           title: Posts
           manage: Manage posts

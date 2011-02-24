@@ -3,7 +3,6 @@
 	<ul id="actions">
 		
 		<li><%= link_to t('.posts.new'), new_admin_blog_post_url %></li>
-		<li><%= link_to t('.posts.uncategorized'), uncategorized_admin_blog_posts_url %></li>
 		
 		<% if BlogPost.comments_allowed? %>
 			<li>
@@ -19,9 +18,9 @@
 			<li><%= link_to t('.comments.rejected'), rejected_admin_blog_comments_path %></li>
 	  <% end %>
 	
-		<li><%= link_to t('.categories.title'), '#' %></li>
 		<li><%= link_to t('.categories.manage'), admin_blog_categories_url %></li>
 		<li><%= link_to t('.categories.new'), new_admin_blog_category_url(:dialog => true, :height => 325) %></li>
+		<li><%= link_to t('.posts.uncategorized'), uncategorized_admin_blog_posts_url %></li>
 
 		<li><%= link_to t('.settings.comments'), comments_admin_blog_settings_url, :class => "#{BlogPost.comments_allowed? ? 'success' : 'failure'}_icon" %></li>
     <li><%= link_to t('.settings.moderation'), moderation_admin_blog_settings_url, :class => "#{BlogComment::Moderation.enabled? ? 'success' : 'failure'}_icon" %></li>
