@@ -5,7 +5,7 @@
 	</header>
 	
 	<section id="full_comment">
-		<p><%=simple_format strip_tags(@blog_comment.message) %></p>
+		<%=simple_format strip_tags(@blog_comment.message) %>
 	</section><!-- #full_comment -->
 	
 	<section id="comment_details">
@@ -19,21 +19,17 @@
 			
 			<dt><%= t('.from') %></dt>
 	   	<dd><%= @blog_comment.name %> [<%= mail_to @blog_comment.email, @blog_comment.email, {:title => t('.click_to_email')} %>]</dd>
-	
-	    <dt><%= t('.date') %></dt>
-	    <dd><%= l(Date.parse(@blog_comment.created_at.to_s), :format => :long) %></dd>
-	
 		</dl>
 		
 	</section><!-- #comment_details -->
 	
 	<section id="comment_actions">
-		<nav>
-	    <%= link_to t('.back'), {:action => 'index'}, :class => "comment_back" %>
-	    <%= link_to t('.reject'), rejected_admin_blog_comment_path(@blog_comment, :return_to => 'rejected'),
-	        :class => 'comment_reject' unless @blog_comment.rejected? %>
+		<nav> 
 	    <%= link_to t('.approve'), approved_admin_blog_comment_path(@blog_comment, :return_to => 'approved'),
-	        :class => 'comment_approve' unless @blog_comment.approved? %>
+	        :class => 'comment_approve button' unless @blog_comment.approved? %>
+			<%= link_to t('.reject'), rejected_admin_blog_comment_path(@blog_comment, :return_to => 'rejected'),
+			        :class => 'comment_reject button' unless @blog_comment.rejected? %>
+			<%= link_to t('.back'), {:action => 'index'}, :class => "comment_back button" %>
 		</nav>
 	</section><!-- #comment_actions -->
 		

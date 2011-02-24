@@ -88,7 +88,7 @@
 #individual_comment {
 }
 #individual_comment header {
-	margin: 15px 0;
+	margin: 15px 0 0;
 	padding 0;
 	border: 0;
 }
@@ -109,11 +109,88 @@
 #individual_comment #full_comment {
 	display: block;
 	background-color: #f0f6f6;
-	padding: 15px 15px 0 15px;
+	border-top: 1px solid #bce3d5;
+	border-bottom: 1px solid #bce3d5;
+	padding: 15px;
 }
 #individual_comment #full_comment p {
 	margin: 0 0 15px;
+	color: #333;
 }
+#individual_comment #full_comment p:last-child {
+	margin: 0;
+}
+
+#individual_comment #comment_details {
+	display: block;
+}
+#individual_comment #comment_details dl {
+	margin: 10px 0;
+	padding: 0;
+	color: #333;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 17px;
+}
+#individual_comment #comment_details dl dt {
+	float: left;
+	width: 75px;
+	margin: 0 10px 0 0;
+	padding: 4px 0;
+}
+#individual_comment #comment_details dl dt:after {
+	content: ":";
+}
+#individual_comment #comment_details dl dd {
+	margin: 0 0 0 70px;
+	padding: 4px 0;
+}
+
+#individual_comment #comment_actions {
+	display: block;
+	margin: 20px 0 10px;
+}
+#individual_comment #comment_actions nav a {
+	display: inline-block;
+	min-height: 32px;
+	border: 1px solid #ddd;
+	background-color: #f4f4f4;
+	text-shadow: 0 1px 0 #fff;
+	color: #333;
+	font-weight: normal;
+	padding-left :25px;
+}
+#individual_comment #comment_actions nav a.comment_approve {
+	background: #f4f4f4 url(/images/refinerycms-blog/icons/check.gif) no-repeat 8px 10px;
+	color: #509691;
+}
+#individual_comment #comment_actions nav a.comment_approve:hover {
+	background: #888 url(/images/refinerycms-blog/icons/check.gif) no-repeat 8px -90px;
+	border: 1px solid #666;
+	color: #fff;
+	text-shadow: 0 1px 0 #000;
+}
+#individual_comment #comment_actions nav a.comment_reject {
+	background: #f4f4f4 url(/images/refinerycms-blog/icons/delete.gif) no-repeat 8px 10px;
+	color: #d13939;
+}
+#individual_comment #comment_actions nav a.comment_reject:hover {
+	background: #888 url(/images/refinerycms-blog/icons/delete.gif) no-repeat 8px -90px;
+	border: 1px solid #666;
+	color: #fff;
+	text-shadow: 0 1px 0 #000;
+}
+#individual_comment #comment_actions nav a.comment_back {
+	background: #f4f4f4 url(/images/refinerycms-blog/icons/back.gif) no-repeat 8px 10px;
+	color: #555;
+}
+#individual_comment #comment_actions nav a.comment_back:hover {
+	background: #888 url(/images/refinerycms-blog/icons/back.gif) no-repeat 8px -90px;
+	border: 1px solid #666;
+	color: #fff;
+	text-shadow: 0 1px 0 #000;
+}
+
 
 
 
